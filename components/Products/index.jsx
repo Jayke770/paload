@@ -1,7 +1,9 @@
 const products = ['smart', 'sun', 'tnt', 'globe', 'tm', 'dito']
 export default function Products() {
     return (
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div
+            id="products"
+            className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
                 <div>
                     <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
@@ -49,7 +51,8 @@ export default function Products() {
                         <div className="absolute bottom-0 right-0 w-1 h-full duration-300 origin-top transform scale-y-0  group-hover:scale-y-100" />
                         <img
                             className="relative w-full h-40 top-0 object-contain p-5"
-                            src={`/assets/products/${product}.png`} />
+                            src={`/assets/products/${product}.png`}
+                            alt={product} />
                     </div>
                 ))}
             </div>

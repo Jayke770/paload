@@ -17,3 +17,10 @@
 ::-webkit-scrollbar-thumb {
     @apply bg-primary cursor-pointer;
 }
+
+@supports (backdrop-filter: blur(20px)) {
+    .translucent {
+        --tw-bg-opacity: 0.1 !important;
+        backdrop-filter: saturate(180%) blur(20px);
+    }
+}

@@ -1,6 +1,9 @@
+import NextLink from 'next/link'
 export default function Features() {
     return (
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div
+            id="features"
+            className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
             <div className="flex justify-center flex-col items-center">
                 <p className="font-sans text-3xl font-bold tracking-tight text-gray-900 text-center sm:text-4xl sm:leading-none max-w-lg mb-6">
                     Our Platform Offers
@@ -37,13 +40,13 @@ export default function Features() {
                         <p className="mb-2 text-sm text-gray-900">
                             Our website makes it simple to sell loads.
                         </p>
-                        <a
-                            href="/"
-                            aria-label=""
-                            className="inline-flex items-center text-sm font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-                        >
-                            Learn more
-                        </a>
+                        <NextLink passHref href="/">
+                            <a
+                                aria-label=""
+                                className="inline-flex items-center text-sm font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">
+                                Learn more
+                            </a>
+                        </NextLink>
                     </div>
                 </div>
                 <div className="relative cursor-pointer p-px overflow-hidden transition duration-300 transform border rounded shadow-sm hover:scale-105 group hover:shadow-xl">
@@ -73,13 +76,13 @@ export default function Features() {
                         <p className="mb-2 text-sm text-gray-900">
                             Sell Load using our powerful bots.
                         </p>
-                        <a
-                            href="/"
-                            aria-label=""
-                            className="inline-flex items-center text-sm font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-                        >
-                            Learn more
-                        </a>
+                        <NextLink passHref href="/">
+                            <a
+                                aria-label=""
+                                className="inline-flex items-center text-sm font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">
+                                Learn more
+                            </a>
+                        </NextLink>
                     </div>
                 </div>
                 <div className="relative cursor-pointer p-px overflow-hidden transition duration-300 transform border rounded shadow-sm hover:scale-105 group hover:shadow-xl">
@@ -109,13 +112,13 @@ export default function Features() {
                         <p className="mb-2 text-sm text-gray-900">
                             Create your own application or website using our API.
                         </p>
-                        <a
-                            href="/"
-                            aria-label=""
-                            className="inline-flex items-center text-sm font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-                        >
-                            Learn more
-                        </a>
+                        <NextLink passHref href="/">
+                            <a
+                                aria-label=""
+                                className="inline-flex items-center text-sm font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">
+                                Learn more
+                            </a>
+                        </NextLink>
                     </div>
                 </div>
             </div>

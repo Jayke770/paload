@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import NextLink from 'next/link'
+import ScrollIntoView from 'react-scroll-into-view'
 export default function Nav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     return (
-        <div className="px-4 py-4 md:px-24 lg:px-8">
+        <div className="px-4 py-4 md:px-24 lg:px-8 fixed w-full bg-white z-50 translucent">
             <div className="relative flex items-center justify-between">
                 <div className="flex items-center">
                     <NextLink href="/" passHref>
@@ -16,59 +17,49 @@ export default function Nav() {
                             </span>
                         </a>
                     </NextLink>
-                    <ul className="flex items-center hidden space-x-8 lg:flex">
+                    <ul className="hidden items-center space-x-8 lg:flex">
                         <li>
-                            <a
-                                href="/"
-                                aria-label="Our product"
-                                title="Our product"
-                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                            >
-                                Products
-                            </a>
+                            <ScrollIntoView selector='#products'>
+                                <a
+                                    aria-label="Our product"
+                                    title="Our product"
+                                    className="font-medium cursor-pointer tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">
+                                    Products
+                                </a>
+                            </ScrollIntoView>
                         </li>
                         <li>
-                            <a
-                                href="/"
-                                aria-label="Our product"
-                                title="Our product"
-                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                            >
-                                Features
-                            </a>
+                            <ScrollIntoView selector='#features'>
+                                <a
+                                    aria-label="Our product"
+                                    title="Our product"
+                                    className="font-medium cursor-pointer  tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">
+                                    Features
+                                </a>
+                            </ScrollIntoView>
                         </li>
                         <li>
-                            <a
-                                href="/"
-                                aria-label="Product pricing"
-                                title="Product pricing"
-                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                            >
-                                Pricing
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="/"
-                                aria-label="About us"
-                                title="About us"
-                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                            >
-                                About us
-                            </a>
+                            <ScrollIntoView selector='#footer'>
+                                <a
+                                    aria-label="About us"
+                                    title="About us"
+                                    className="font-medium cursor-pointer  tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">
+                                    About us
+                                </a>
+                            </ScrollIntoView>
                         </li>
                     </ul>
                 </div>
-                <ul className="flex items-center hidden space-x-8 lg:flex">
+                <ul className="items-center hidden space-x-8 lg:flex">
                     <li>
-                        <a
-                            href="/"
-                            className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                            aria-label="Sign up"
-                            title="Sign up"
-                        >
-                            Get Started
-                        </a>
+                        <NextLink href="/api/auth/signin" passHref>
+                            <a
+                                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                aria-label="Sign up"
+                                title="Sign up">
+                                Get Started
+                            </a>
+                        </NextLink>
                     </li>
                 </ul>
                 <div className="lg:hidden">
@@ -103,7 +94,7 @@ export default function Nav() {
                                                 aria-label="Company"
                                                 title="Company"
                                                 className="inline-flex items-center mr-8">
-                                                <span className="text-xl font-bold font-square-peg tracking-wide text-gray-800  uppercase">
+                                                <span className="text-xl font-bold tracking-wide text-gray-800  uppercase">
                                                     PaLoad
                                                 </span>
                                             </a>
@@ -128,49 +119,37 @@ export default function Nav() {
                                 <nav>
                                     <ul className="space-y-4">
                                         <li>
-                                            <a
-                                                href="/"
-                                                aria-label="Our product"
-                                                title="Our product"
-                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                            >
-                                                Product
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="/"
-                                                aria-label="Our product"
-                                                title="Our product"
-                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                            >
-                                                Features
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="/"
-                                                aria-label="Product pricing"
-                                                title="Product pricing"
-                                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                            >
-                                                Pricing
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <NextLink href="/" passHref>
+                                            <ScrollIntoView selector='#products'>
                                                 <a
-                                                    href="/"
+                                                    aria-label="Our product"
+                                                    title="Our product"
+                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">
+                                                    Products
+                                                </a>
+                                            </ScrollIntoView>
+                                        </li>
+                                        <li>
+                                            <ScrollIntoView selector='#features'>
+                                                <a
+                                                    aria-label="Our product"
+                                                    title="Our product"
+                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">
+                                                    Features
+                                                </a>
+                                            </ScrollIntoView>
+                                        </li>
+                                        <li>
+                                            <ScrollIntoView selector='#footer'>
+                                                <a
                                                     aria-label="About us"
                                                     title="About us"
-                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                                >
+                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400" >
                                                     About us
                                                 </a>
-                                            </NextLink>
+                                            </ScrollIntoView>
                                         </li>
                                         <li>
-                                            <NextLink href="/" passHref>
+                                            <NextLink href="/api/auth/signin" passHref>
                                                 <a
                                                     className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                                                     aria-label="Sign up"
