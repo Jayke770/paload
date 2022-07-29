@@ -11,7 +11,7 @@ export default function Nav() {
                             aria-label="Company"
                             title="Company"
                             className="inline-flex items-center mr-8">
-                            <span className="text-xl font-bold font-square-peg tracking-wide text-gray-800  uppercase">
+                            <span className="text-xl font-bold tracking-wide text-gray-800  uppercase">
                                 PaLoad
                             </span>
                         </a>

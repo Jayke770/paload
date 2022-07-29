@@ -9,7 +9,7 @@ export default function Footer() {
                         title="Company"
                         className="inline-flex items-center"
                     >
-                        <span className="text-xl font-bold tracking-wide text-gray-800 font-square-peg uppercase">
+                        <span className="text-xl font-bold tracking-wide text-gray-800 uppercase">
                             PaLoad
                         </span>
                     </a>

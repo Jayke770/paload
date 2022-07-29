@@ -19,10 +19,10 @@ export default function Header() {
                     </div>
                 </div>
                 <div className="flex items-center justify-center lg:w-1/2">
-                    <div className="w-2/5">
+                    <div className="w-[60%] lg:w-2/5">
                         <img className="object-cover" src="/assets/images/mobile-light.png" alt="" />
                     </div>
-                    <div className="w-[45%] -ml-28 lg:-ml-28">
+                    <div className="w-[65%] lg:w-[45%] -ml-28 lg:-ml-28">
                         <img className="object-cover" src="/assets/images/mobile-light.png" alt="" />
                     </div>
                 </div>

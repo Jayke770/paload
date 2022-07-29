@@ -13,7 +13,7 @@ module.exports = konstaConfig({
     extend: {
       fontFamily: {
         sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
-        'square-peg': ['SquarePeg', 'cursive']
+        'square-peg': ['SquarePeg', 'cursive', ...defaultTheme.fontFamily.sans]
       },
       colors: {
         red: {
